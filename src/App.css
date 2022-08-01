@@ -1,38 +1,524 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavbarWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-bottom: 1px solid #e8eaec;
+}
+
+.Ad {
+  background-color: #0052ff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.075rem;
+  letter-spacing: -0.1px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0.5rem 0rem;
+}
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.4rem 1.6rem;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Title {
+  color: #0052ff;
+  font-size: 1.6rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Links {
+  display: flex;
+  list-style-type: none;
+  padding: 0 3rem;
+}
+
+.Links li {
+  font-size: 0.95rem;
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.NavBtns button {
+  padding: 0.6rem 0.8rem;
+  margin: 0rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.NavBtns button:first-child {
+  background-color: #fff;
+  border: none;
+}
+
+.NavBtns button:last-child {
+  background-color: #0052ff;
+  color: #fff;
+  border: none;
+}
+
+.App {
+  height: 100%;
+}
+
+.Hero {
+  padding: 3rem 0rem;
+  display: flex;
+  align-items: center;
+}
+
+.HeroContent h2 {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.HeroContent h3 {
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.HeroContent p {
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+.HeroForm {
+  padding: 1rem 0rem;
+}
+
+.HeroForm input {
+  width: 250px;
+  padding: 1.2rem;
+  border: 1px solid #e8eaec;
+  border-radius: 7px;
+}
+
+.HeroForm button {
+  padding: 1.2rem 1.5rem;
+  margin-left: 1rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.Reward {
+  background-color: #f6f8ff;
+}
+
+.RewardInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.RewardInfo h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.RewardInfo h3 {
+  font-size: 1rem;
+  font-weight: 200;
+  word-wrap: break-word;
+  padding: 2rem 0rem;
+  padding-right: 3rem;
+}
+
+.RewardImg {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RewardInfo button {
+  padding: 1.2rem 1.5rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.Explore {
+  background-color: #f6f8ff;
+  display: flex;
+  padding-bottom: 6rem;
+}
+
+.ExploreInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 2rem;
+  padding-top: 4rem;
+}
+
+.ExploreInfo h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  width: 75%;
+}
+
+.ExploreInfo h3 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  padding: 2rem 0rem;
+  width: 75%;
+}
+
+.ExploreInfo button {
+  padding: 1.2rem 1.5rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ExploreCrypto {
+  width: 50%;
+}
+
+.ExploreCryptoData {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ExploreCard {
+  height: 170px;
+  width: 150px;
+  background-color: #fff;
+  border: 1px solid #e8eaec;
+  border-radius: 14px;
+  margin: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.ExploreCardInfo {
+  padding: 1rem 0rem;
+}
+
+.ExploreCardInfo h2 {
+  font-size: 1rem;
+}
+
+.ExploreCardInfo h3 {
+  font-size: 1rem;
+  color: #5b616e;
+  padding: 0.5rem 0;
+}
+
+.ExploreCardPercent {
+  display: flex;
+  justify-content: center;
+  color: #388551;
+  font-size: 1.5rem;
+}
+
+.ExploreCryptoBtns button {
+  border: none;
+  margin: 1rem;
+  background-color: #f6f8ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ExploreCryptoBtns :first-child {
+  border: 1px solid #0052ff;
+  color: #0052ff;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+.Trade {
+  padding-top: 2rem;
+}
+
+.TradeCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 4rem;
+  margin-bottom: 5rem;
+}
+
+.TradeAbout {
+  padding-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.TradeAbout h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.TradeAbout h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2rem 0;
+}
+
+.TradeAbout p {
+  font-weight: 400;
+}
+
+.TradeAbout button {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.Earn {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f8ff;
+}
+
+.EarnCard {
+  background-color: #fff;
+  border-radius: 14px;
+  width: 45%;
+  margin: 1rem;
+  border: none;
+}
+
+.EarnCard img {
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  height: 260px;
+  width: 100%;
+}
+
+.EarnCardInfo {
+  padding: 1rem;
+}
+
+.EarnCardInfo h2 {
+  font-size: 1.2rem;
+}
+
+.EarnCardInfo p {
+  padding: 1rem 0;
+  color: #5b616e;
+  border-bottom: 1px solid #5b616e2a;
+  font-size: 1.1rem;
+}
+
+.EarnCardInfo button {
+  border: none;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  color: #004cec;
+  font-size: 1rem;
+}
+
+.Freedom {
+  display: flex;
+}
+
+.FreedomInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.FreedomInfo h2 {
+  padding: 0 4rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.FreedomInfo h3 {
+  padding: 4rem 4rem;
+  color: #5b616e;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.FreedomInfo button {
+  margin: 0 4rem;
+  padding: 1.2rem 1.5rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.FreedomImg {
+  width: 80%;
+  overflow: hidden;
+}
+
+.Promotion {
+  margin-top: 4rem;
+  display: flex;
+  padding-bottom: 4rem;
+}
+
+.PromotionImg {
+  width: 50%;
+}
+
+.PromotionInfo {
+  width: 50%;
+}
+
+.PromotionInfo h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.PromotionInfo h3 {
+  padding: 1rem 0;
+  font-size: 4rem;
+  font-weight: 400;
+  padding-right: 3rem;
+}
+
+.PromotionSignup input {
+  border-radius: 7px;
+  padding: 1.2rem;
+  width: 50%;
+  border: 1px solid #5b616e;
+}
+
+.PromotionSignup button {
+  margin: 0 1rem;
+  padding: 1.2rem 1.5rem;
+  background-color: #0052ff;
+  color: #fff;
+  border-radius: 7px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.PromotionLink {
+  color: #004cec;
+}
+
+.Terms {
+  padding: 0 2rem;
+  border-bottom: 1px solid #5b616e21;
+}
+
+.Terms p {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  color: #5b616ed3;
+}
+
+.TermsLink {
+  color: #004cec;
+}
+
+.Footer {
+  display: flex;
+  padding: 5rem 0;
+}
+
+.FooterCopyright {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+.FooterCopyright h2 {
+  color: #004cec;
+}
+
+.FooterCopyright h3 {
+  margin: 1rem 0;
+  padding: 0.5rem 0.5rem;
+  border-radius: 7px;
+  border: 1px solid #5b616e2c;
+  width: 50%;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.FooterCopyright p {
+  color: #5b616eb0;
+  padding-bottom: 1rem;
+}
+
+.FooterLinks {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  padding-right: 5rem;
+}
+
+.FooterCard {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  padding-right: 2rem;
+}
+
+.FooterCard h2 {
+  font-size: 1rem;
+}
+
+.FooterCard ul {
+  list-style-type: none;
+}
+
+.FooterCard li {
+  color: #5b616ee8;
+  font-size: 0.9rem;
+  padding-top: 0.8rem;
+  font-weight: 500;
 }
