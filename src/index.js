@@ -5,9 +5,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Navbar from "./components/Navbar";
-import Explore from "./pages/Explore";
-import Learn from "./pages/Learn";
 import Footer from "./components/Footer";
+import Coming from "./pages/Coming";
+import Signup from "./pages/Signup";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
@@ -15,8 +15,8 @@ root.render(
     <Navbar />
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/explore" element={<Explore />} />
-      <Route path="/learn" element={<Learn />} />
+      <Route path="/comingSoon" element={<Coming />} />
+      <Route path="/signUp" element={<Signup />} />
     </Routes>
     <Footer />
   </BrowserRouter>

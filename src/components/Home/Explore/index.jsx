@@ -1,13 +1,12 @@
 import React from "react";
-import ExploreCard1 from "../../../assets/exploreCard1.png";
-import ExploreCard2 from "../../../assets/exploreCard2.png";
-import ExploreCard3 from "../../../assets/exploreCard3.png";
-import ExploreCard4 from "../../../assets/exploreCard4.png";
-import ExploreCard5 from "../../../assets/exploreCard5.png";
-import ExploreCard6 from "../../../assets/exploreCard6.png";
 import Container from "../../Common/Container";
+import Button from "../../Common/Button";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { coins } from "./data";
 
 export default function Explore() {
+  const [category, setCategory] = useState("TOPGAINERS");
   return (
     <div className="Explore">
       <Container>
@@ -23,89 +22,56 @@ export default function Explore() {
               Simply and securely buy, sell, and manage hundreds of
               cryptocurrencies.
             </h3>
-            <button>See more assets</button>
+            <Link to="/comingSoon">
+              <Button>See more assets</Button>
+            </Link>
           </div>
 
           <div className="ExploreCrypto">
             <div className="ExploreCryptoBtns">
-              <button>Top Gainers</button>
-              <button>Tradable</button>
-              <button>New on Coinbase</button>
+              <button
+                className={category === "TOPGAINERS" ? "Current" : ""}
+                onClick={() => setCategory("TOPGAINERS")}
+              >
+                Top Gainers
+              </button>
+              <button
+                className={category === "TRADABLE" ? "Current" : ""}
+                onClick={() => setCategory("TRADABLE")}
+              >
+                Tradable
+              </button>
+              <button
+                className={category === "NEW" ? "Current" : ""}
+                onClick={() => setCategory("NEW")}
+              >
+                New on Coinbase
+              </button>
             </div>
 
             <div className="ExploreCryptoData">
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard1} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard2} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard3} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard4} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard5} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
-              <div className="ExploreCard">
-                <div className="ExploreCardImg">
-                  <img src={ExploreCard6} height="40px" />
-                </div>
-                <div className="ExploreCardInfo">
-                  <h2>DerivaDAO</h2>
-                  <h3>$0.91</h3>
-                </div>
-                <div className="ExploreCardPercent">
-                  <h4>7.14%</h4>
-                </div>
-              </div>
+              {coins
+                .filter((coin) => coin.category === category)
+                .map((coin) => (
+                  <div className="ExploreCard">
+                    <div className="ExploreCardImg">
+                      <img src={coin.image} height="40px" />
+                    </div>
+                    <div className="ExploreCardInfo">
+                      <h2>{coin.name}</h2>
+                      <h3>{coin.price}</h3>
+                    </div>
+                    <div className="ExploreCardPercent">
+                      <h4
+                        style={{
+                          color: coin.percent <= 0 ? "crimson" : "#388551",
+                        }}
+                      >
+                        {coin.percent}%
+                      </h4>
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

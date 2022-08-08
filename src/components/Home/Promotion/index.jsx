@@ -1,6 +1,8 @@
 import React from "react";
 import PromotionImg from "../../../assets/promotionCard1.webp";
 import Container from "../../Common/Container";
+import Button from "../../Common/Button";
+import { Link } from "react-router-dom";
 
 export default function Promotion() {
   return (
@@ -17,7 +19,9 @@ export default function Promotion() {
           </h3>
           <form className="PromotionSignup">
             <input placeholder="satoshi@nakamoto.com" />
-            <button>Sign up</button>
+            <Link to="/signUp">
+              <Button>Sign up</Button>
+            </Link>
           </form>
         </div>
       </div>

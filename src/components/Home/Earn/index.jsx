@@ -2,6 +2,7 @@ import React from "react";
 import EarnCard1 from "../../../assets/earnCard1.webp";
 import EarnCard2 from "../../../assets/earnCard2.webp";
 import Container from "../../Common/Container";
+import { Link } from "react-router-dom";
 
 export default function Earn() {
   return (
@@ -25,7 +26,9 @@ export default function Earn() {
                 Start earning crypto just for learning about how specific
                 cryptocurrencies work.
               </p>
-              <button>Earn more</button>
+              <Link to="/comingSoon">
+                <button>Earn more</button>
+              </Link>
             </div>
           </div>
           <div className="EarnCard">
@@ -38,7 +41,9 @@ export default function Earn() {
                 Explore beginner guides, practical tutorials, and market updates
                 on Bitcoin, Ethereum and more.
               </p>
-              <button>Learn more</button>
+              <Link to="/comingSoon">
+                <button>Learn more</button>
+              </Link>
             </div>
           </div>
         </div>

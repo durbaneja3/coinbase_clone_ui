@@ -10,22 +10,57 @@ export default function Navbar() {
       </div>
       <Container>
         <div className="Navbar">
-          <h1 className="Title">coinbase</h1>
+          <Link to="/">
+            <h1 className="Title">coinbase</h1>
+          </Link>
           <ul className="Links">
-            <li>
-              <Link to={"/Explore"}>Explore</Link>
-            </li>
-            <li>
-              <Link to={"/Learn"}>Learn</Link>
-            </li>
-            <li>Individuals</li>
-            <li>Businesses</li>
-            <li>Developers</li>
-            <li>Company</li>
+            {[
+              {
+                name: "Explore",
+                link: "/comingSoon",
+              },
+              {
+                name: "Learn",
+                link: "/comingSoon",
+              },
+              {
+                name: "Individuals",
+                link: "/comingSoon",
+              },
+              {
+                name: "Businesses",
+                link: "/comingSoon",
+              },
+              {
+                name: "Developers",
+                link: "/comingSoon",
+              },
+              {
+                name: "Company",
+                link: "/comingSoon",
+              },
+            ].map((navItem) => {
+              return (
+                <li>
+                  <Link to={navItem.link}>{navItem.name}</Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="NavBtns">
-            <button>Sign In</button>
-            <button>Sign Up</button>
+            <Link to="/comingSoon">
+              <button
+                style={{
+                  backgroundColor: "white",
+                  color: "#000",
+                }}
+              >
+                Sign In
+              </button>
+            </Link>
+            <Link to="/signUp">
+              <button>Sign Up</button>
+            </Link>
           </div>
         </div>
       </Container>

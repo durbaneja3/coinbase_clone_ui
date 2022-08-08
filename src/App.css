@@ -15,6 +15,14 @@ a {
   color: black;
 }
 
+button {
+  cursor: pointer;
+}
+
+.HyperLinkMainColor {
+  color: #004cec;
+}
+
 .NavbarWrapper {
   display: flex;
   flex-direction: column;
@@ -113,17 +121,7 @@ a {
   padding: 1.2rem;
   border: 1px solid #e8eaec;
   border-radius: 7px;
-}
-
-.HeroForm button {
-  padding: 1.2rem 1.5rem;
-  margin-left: 1rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-right: 1rem;
 }
 
 .Reward {
@@ -161,16 +159,6 @@ a {
   align-items: center;
 }
 
-.RewardInfo button {
-  padding: 1.2rem 1.5rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
 .Explore {
   background-color: #f6f8ff;
   display: flex;
@@ -198,16 +186,6 @@ a {
   font-weight: 200;
   padding: 2rem 0rem;
   width: 75%;
-}
-
-.ExploreInfo button {
-  padding: 1.2rem 1.5rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
 }
 
 .ExploreCrypto {
@@ -247,7 +225,6 @@ a {
 .ExploreCardPercent {
   display: flex;
   justify-content: center;
-  color: #388551;
   font-size: 1.5rem;
 }
 
@@ -259,7 +236,7 @@ a {
   font-weight: 600;
 }
 
-.ExploreCryptoBtns :first-child {
+.ExploreCryptoBtns .Current {
   border: 1px solid #0052ff;
   color: #0052ff;
   border-radius: 20px;
@@ -298,17 +275,7 @@ a {
 
 .TradeAbout p {
   font-weight: 400;
-}
-
-.TradeAbout button {
-  margin-top: 2rem;
-  padding: 1.2rem 1.5rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
+  padding-bottom: 1rem;
 }
 
 .Earn {
@@ -364,6 +331,7 @@ a {
 
 .Freedom {
   display: flex;
+  justify-content: space-between;
 }
 
 .FreedomInfo {
@@ -374,28 +342,19 @@ a {
 }
 
 .FreedomInfo h2 {
-  padding: 0 4rem;
+  padding-right: 5rem;
   font-size: 2rem;
   font-weight: 400;
 }
 
 .FreedomInfo h3 {
-  padding: 4rem 4rem;
+  padding: 4rem 0;
+  padding-right: 5rem;
   color: #5b616e;
   font-size: 1rem;
   font-weight: 500;
 }
 
-.FreedomInfo button {
-  margin: 0 4rem;
-  padding: 1.2rem 1.5rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
-}
 .FreedomImg {
   width: 80%;
   overflow: hidden;
@@ -432,17 +391,8 @@ a {
   padding: 1.2rem;
   width: 50%;
   border: 1px solid #5b616e;
-}
-
-.PromotionSignup button {
-  margin: 0 1rem;
-  padding: 1.2rem 1.5rem;
-  background-color: #0052ff;
-  color: #fff;
-  border-radius: 7px;
-  border: none;
-  font-size: 1rem;
-  font-weight: 600;
+  margin-top: 2rem;
+  margin-right: 1rem;
 }
 
 .PromotionLink {
@@ -458,10 +408,6 @@ a {
   padding: 1rem 0;
   font-size: 0.8rem;
   color: #5b616ed3;
-}
-
-.TermsLink {
-  color: #004cec;
 }
 
 .Footer {
@@ -521,4 +467,125 @@ a {
   font-size: 0.9rem;
   padding-top: 0.8rem;
   font-weight: 500;
+}
+
+.Signup {
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.SignupForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.SignupHeader h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.SignupHeader h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.SignupRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.SignupRow label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.SignupRow input {
+  padding: 1.2rem;
+  border: 1px solid #5b616e;
+  border-radius: 7px;
+  margin-top: 0.8rem;
+  margin-right: 1rem;
+}
+
+.SignupCheckbox {
+  display: flex;
+}
+
+.SignupCheckbox h3 {
+  padding: 0 0.8rem;
+}
+
+.SignupColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignupColumn label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.8rem 0;
+}
+
+.SignupColumn input {
+  padding: 1rem;
+  padding: 1.2rem;
+  border: 1px solid #5b616e;
+  border-radius: 7px;
+}
+
+.SignupCheckbox {
+  padding: 2rem 0;
+}
+.SignupCheckbox h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.SignupBtn button {
+  padding: 1.2rem 1.5rem;
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid #004bec07;
+  color: #fff;
+  background-color: #004bec2f;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.SignupLink {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.SignupDisclosure {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.SignupPromotion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 180px;
+}
+
+.SignupPromotion h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.SignupPromotion h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 1rem 0rem;
+}
+
+.SignupPromotion img {
+  width: 100%;
 }

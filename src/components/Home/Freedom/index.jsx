@@ -1,6 +1,8 @@
 import React from "react";
 import FreedomImg from "../../../assets/freedomCard1.webp";
 import Container from "../../Common/Container";
+import Button from "../../Common/Button";
+import { Link } from "react-router-dom";
 
 export default function Freedom() {
   return (
@@ -12,7 +14,9 @@ export default function Freedom() {
             We're committed to creating more economic freedom through
             accessible, safe, and secure financial tools for everyone.
           </h3>
-          <button>Learn more</button>
+          <Link to="/comingSoon">
+            <Button>Learn more</Button>
+          </Link>
         </div>
         <div className="FreedomImg">
           <img src={FreedomImg} height="900px" />
