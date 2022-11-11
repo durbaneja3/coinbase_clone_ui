@@ -9,6 +9,7 @@ export default function Reward() {
     <div className="Reward">
       <Container>
         <div
+          className="RewardWrapper"
           style={{
             padding: "6rem 1rem",
             display: "flex",

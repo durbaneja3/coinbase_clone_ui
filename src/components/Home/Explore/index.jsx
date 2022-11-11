@@ -11,6 +11,7 @@ export default function Explore() {
     <div className="Explore">
       <Container>
         <div
+          className="ExploreWrapper"
           style={{
             display: "flex",
             paddingBottom: "6rem",

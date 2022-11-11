@@ -9,6 +9,7 @@ export default function Earn() {
     <div className="Earn">
       <Container>
         <div
+          className="EarnWrapper"
           style={{
             padding: "4rem 2rem",
             display: "flex",

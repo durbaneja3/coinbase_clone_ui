@@ -589,3 +589,159 @@ button {
 .SignupPromotion img {
   width: 100%;
 }
+
+@media only screen and (max-width: 600px) {
+  .Ad {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .Navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Navbar ul {
+    display: none;
+  }
+
+  .Hero {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+  }
+
+  .App {
+    width: 100%;
+  }
+
+  .HeroImgWrapper img {
+    max-width: 350px;
+    max-height: 350px;
+  }
+  .HeroContent {
+    padding: 1rem;
+  }
+  .HeroContent h2 {
+    font-size: 2rem;
+  }
+  .HeroContent h3 {
+    font-size: 1rem;
+  }
+  .HeroForm button {
+    margin-top: 1rem;
+  }
+  .RewardInfo {
+    width: 100%;
+  }
+  .RewardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 !important; */
+  }
+  .RewardImg img {
+    max-height: 300px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ExploreWrapper {
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 0 !important; */
+  }
+  .ExploreCryptoData {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .Explore {
+    padding-bottom: 0;
+  }
+  .ExploreInfo {
+    width: 100%;
+  }
+  .ExploreCrypto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .Trade {
+    padding-top: 0;
+  }
+
+  .TradeCard {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding: 2rem 0;
+  }
+  .TradeAbout {
+    padding: 2rem 0;
+    padding-left: 1rem;
+    display: flex;
+  }
+
+  .TradeImg img {
+    max-height: 500px;
+  }
+  .Earn {
+    padding: 0;
+  }
+  .EarnWrapper {
+    flex-wrap: wrap;
+    padding: 0rem !important;
+  }
+
+  .EarnCard {
+    width: 100%;
+  }
+  .Freedom {
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+  .FreedomInfo {
+    padding-bottom: 2rem;
+  }
+
+  .FreedomImg img {
+    display: none;
+  }
+  .Promotion {
+    flex-direction: column;
+  }
+  .PromotionImg {
+    width: 100%;
+  }
+  .PromotionImg img {
+    max-width: 400px;
+    position: relative;
+    left: -20px;
+  }
+  .PromotionInfo {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .PromotionInfo h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .Footer {
+    flex-direction: column;
+  }
+  .FooterLinks {
+    flex-direction: column;
+    padding-right: 0;
+    width: 100%;
+  }
+  .FooterCard h2 {
+    text-align: center;
+  }
+}
